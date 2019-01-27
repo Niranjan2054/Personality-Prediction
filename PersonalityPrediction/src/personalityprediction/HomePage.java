@@ -5,6 +5,8 @@
  */
 package personalityprediction;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Niranjan
@@ -12,7 +14,7 @@ package personalityprediction;
 public class HomePage extends javax.swing.JFrame {
 
     /**
-     * Creates new form HomePage
+     * Creates new form HomePag
      */
     public HomePage() {
         initComponents();
@@ -27,39 +29,41 @@ public class HomePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        adminLoginImage = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        adminLogin = new javax.swing.JTextField();
-        adminLogin1 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        cose = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Personality Prediction");
-        setBackground(new java.awt.Color(51, 255, 255));
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setBackground(new java.awt.Color(255, 153, 153));
+        setUndecorated(true);
 
-        adminLoginImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/personalityprediction/login.png"))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(0, 0, 153));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/personalityprediction/userlogin.png"))); // NOI18N
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
 
-        adminLogin.setEditable(false);
-        adminLogin.setBackground(new java.awt.Color(240, 240, 240));
-        adminLogin.setFont(new java.awt.Font("Script MT Bold", 1, 36)); // NOI18N
-        adminLogin.setText("Client Login");
-        adminLogin.setBorder(null);
-        adminLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adminLoginActionPerformed(evt);
+        cose.setEditable(false);
+        cose.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        cose.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cose.setText("X");
+        cose.setBorder(null);
+        cose.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exit(evt);
             }
-        });
-
-        adminLogin1.setEditable(false);
-        adminLogin1.setBackground(new java.awt.Color(240, 240, 240));
-        adminLogin1.setFont(new java.awt.Font("Script MT Bold", 1, 36)); // NOI18N
-        adminLogin1.setText("Admin Login");
-        adminLogin1.setBorder(null);
-        adminLogin1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adminLogin1ActionPerformed(evt);
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hover(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hoveroff(evt);
             }
         });
 
@@ -67,51 +71,37 @@ public class HomePage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(adminLoginImage))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(adminLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(80, 80, 80))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(adminLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(111, 111, 111))))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(375, 375, 375)
+                .addComponent(cose, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(adminLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(adminLoginImage)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(adminLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addComponent(cose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void adminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLoginActionPerformed
+    private void exit(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exit
         // TODO add your handling code here:
-    }//GEN-LAST:event_adminLoginActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exit
 
-    private void adminLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLogin1ActionPerformed
+    private void hover(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hover
         // TODO add your handling code here:
+        cose.setBackground(new java.awt.Color(255, 0, 0));
+    }//GEN-LAST:event_hover
 
-    }//GEN-LAST:event_adminLogin1ActionPerformed
+    private void hoveroff(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoveroff
+        // TODO add your handling code here:
+        cose.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_hoveroff
 
     /**
      * @param args the command line arguments
@@ -139,6 +129,7 @@ public class HomePage extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -149,9 +140,7 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField adminLogin;
-    private javax.swing.JTextField adminLogin1;
-    private javax.swing.JLabel adminLoginImage;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField cose;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
